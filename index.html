@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>五分鐘下酒菜 ｜ Media Kit 2026.06</title>
+<style>
+  :root{
+    --bg:#16100b; --bg2:#1f1610; --card:#251a12; --line:#3a2a1c;
+    --amber:#e9a23b; --amber2:#f3c46b; --cream:#f5ece0;
+    --muted:#b69b80; --ink:#0e0a06; --green:#7fb069;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-snap-type:y mandatory;height:100%}
+  body{
+    font-family:"Hiragino Sans","PingFang TC","Microsoft JhengHei",sans-serif;
+    background:var(--bg);color:var(--cream);line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  .deck{height:100%}
+  section.slide{
+    min-height:100vh;scroll-snap-align:start;
+    display:flex;flex-direction:column;justify-content:center;
+    padding:7vh 9vw;position:relative;
+    border-bottom:1px solid var(--line);
+  }
+  .kicker{
+    color:var(--amber2);letter-spacing:.35em;font-size:.78rem;
+    text-transform:uppercase;margin-bottom:1.2rem;font-weight:700;
+  }
+  h1{font-size:clamp(2.6rem,7vw,5.4rem);line-height:1.08;font-weight:800;letter-spacing:.02em}
+  h2{font-size:clamp(1.9rem,4vw,3rem);font-weight:800;margin-bottom:.4rem}
+  h2 .bar{display:inline-block;width:.5rem;height:1.1em;background:var(--amber2);
+    border-radius:3px;margin-right:.7rem;vertical-align:-.12em}
+  .sub{color:var(--muted);font-size:1.05rem;margin-top:1rem;max-width:46ch}
+  .slogan{color:var(--amber2);font-size:clamp(1.1rem,2.4vw,1.7rem);
+    margin-top:2.2rem;font-weight:600;letter-spacing:.08em}
+  .pagenum{position:absolute;bottom:3.2vh;right:9vw;color:var(--muted);
+    font-size:.8rem;letter-spacing:.2em}
+  .foot{position:absolute;bottom:3.2vh;left:9vw;color:var(--muted);
+    font-size:.8rem;letter-spacing:.15em}
+
+  /* cover */
+  .cover{background:
+    radial-gradient(120% 90% at 80% 10%,rgba(243,196,107,.14),transparent 60%),
+    radial-gradient(100% 80% at 10% 90%,rgba(127,176,105,.08),transparent 55%),
+    linear-gradient(160deg,#1a120c,#120c07);}
+  .cover h1{background:linear-gradient(95deg,#f5ece0 30%,#f3c46b);
+    -webkit-background-clip:text;background-clip:text;color:transparent}
+
+  /* stat grid */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:18px;
+    padding:2rem 1.8rem;position:relative;overflow:hidden}
+  .stat::before{content:"";position:absolute;top:0;left:0;width:100%;height:4px;
+    background:linear-gradient(90deg,var(--amber2),transparent)}
+  .stat .plat{color:var(--muted);font-size:.9rem;letter-spacing:.1em;font-weight:700}
+  .stat .big{font-size:clamp(2rem,4vw,3.1rem);font-weight:800;color:var(--amber2);
+    margin:.4rem 0 .1rem;line-height:1}
+  .stat .biglabel{font-size:.85rem;color:var(--cream);opacity:.75}
+  .stat .row{display:flex;justify-content:space-between;margin-top:1.1rem;
+    padding-top:.9rem;border-top:1px dashed var(--line);font-size:.92rem}
+  .stat .row span:last-child{color:var(--amber2);font-weight:700}
+  .totalline{margin-top:2rem;font-size:1.05rem;color:var(--cream)}
+  .totalline b{color:var(--amber2);font-size:1.3rem}
+
+  /* audience chips */
+  .chips{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:2rem}
+  .chip{background:var(--card);border:1px solid var(--line);border-radius:999px;
+    padding:.55rem 1.2rem;font-size:.95rem;color:var(--cream)}
+  .chip b{color:var(--amber2)}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;margin-top:2.2rem}
+  .cols h3{color:var(--amber2);font-size:1.05rem;margin-bottom:.7rem;letter-spacing:.05em}
+  .cols li{list-style:none;padding:.35rem 0;color:var(--cream);opacity:.9}
+  .cols li::before{content:"—  ";color:var(--muted)}
+
+  /* japan bars */
+  .bars{margin-top:2.2rem;display:flex;flex-direction:column;gap:.85rem;max-width:760px}
+  .barrow{display:grid;grid-template-columns:200px 1fr 90px;align-items:center;gap:1rem}
+  .barrow .name{font-size:.95rem;color:var(--cream)}
+  .barrow .name small{color:var(--muted);display:block;font-size:.75rem}
+  .track{height:18px;background:var(--bg2);border-radius:9px;overflow:hidden}
+  .fill{height:100%;background:linear-gradient(90deg,#b9772a,#f3c46b);border-radius:9px}
+  .val{text-align:right;color:var(--amber2);font-weight:700;font-size:.95rem}
+  .note{margin-top:2rem;color:var(--muted);font-size:.95rem;max-width:60ch}
+
+  /* signature */
+  .big-quote{font-size:clamp(1.6rem,3.5vw,2.6rem);font-weight:700;line-height:1.4;
+    max-width:22ch}
+  .big-quote em{color:var(--amber2);font-style:normal}
+
+  /* offer cards */
+  .offers{display:grid;grid-template-columns:repeat(2,1fr);gap:1.3rem;margin-top:2.2rem;max-width:880px}
+  .offer{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.5rem 1.7rem}
+  .offer h4{color:var(--amber2);font-size:1.15rem;margin-bottom:.5rem}
+  .offer p{color:var(--cream);opacity:.85;font-size:.95rem}
+
+  /* contact */
+  .contact{background:linear-gradient(160deg,#1c140d,#120c07)}
+  .contact .lines{margin-top:2rem;font-size:1.15rem;line-height:2.4}
+  .contact .lines b{color:var(--amber2);margin-right:1rem;letter-spacing:.1em;
+    display:inline-block;width:120px}
+  .hint{position:fixed;bottom:1.2rem;left:50%;transform:translateX(-50%);
+    color:var(--muted);font-size:.75rem;letter-spacing:.2em;opacity:.6;
+    background:rgba(0,0,0,.3);padding:.4rem 1rem;border-radius:999px;
+    pointer-events:none;animation:fade 4s ease 3s forwards}
+  @keyframes fade{to{opacity:0}}
+  @media(max-width:760px){
+    .grid,.offers{grid-template-columns:1fr}
+    .cols{grid-template-columns:1fr}
+    .barrow{grid-template-columns:120px 1fr 70px;gap:.6rem}
+    .contact .lines b{display:block;width:auto}
+  }
+  @media print{
+    html{scroll-snap-type:none}
+    section.slide{min-height:auto;page-break-after:always;border:none}
+    .hint{display:none}
+  }
+</style>
+</head>
+<body>
+<div class="deck">
+
+  <!-- 1 COVER -->
+  <section class="slide cover">
+    <div class="kicker">Media Kit · 2026.06</div>
+    <h1>五分鐘下酒菜</h1>
+    <p class="sub" style="font-size:1.25rem;margin-top:1.4rem">台灣最懂「下酒菜 × 居酒屋 × 日本在地食文化」的美食旅遊頻道</p>
+    <div class="slogan">「不將就，需要講究。」</div>
+    <div class="foot">@5minsotsumami ｜ 小黃 Kevin</div>
+    <div class="pagenum">01</div>
+  </section>
+
+  <!-- 2 WHO -->
+  <section class="slide">
+    <div class="kicker">About</div>
+    <h2><span class="bar"></span>我是誰</h2>
+    <p class="sub" style="max-width:62ch;font-size:1.15rem;margin-top:1.6rem">
+      我是小黃。「五分鐘下酒菜」從「在家五分鐘做一道下酒菜」起家，這幾年延伸到
+      <strong style="color:var(--amber2)">日本在地居酒屋與庶民美食的深度探尋</strong>——
+      尤其是觀光客不會主動走進去的那種巷弄小店。
+    </p>
+    <p class="sub" style="max-width:62ch;font-size:1.15rem">
+      我的內容核心是「<strong style="color:var(--amber2)">喝一杯的理由</strong>」：一道菜、一杯酒、
+      一家店背後的生活感。這讓觀眾不只是看美食，而是被「想親自去坐一次」的衝動驅動。
+    </p>
+    <div class="pagenum">02</div>
+  </section>
+
+  <!-- 3 STATS -->
+  <section class="slide">
+    <div class="kicker">By the numbers</div>
+    <h2><span class="bar"></span>平台數據總覽</h2>
+    <p style="color:var(--muted);font-size:.85rem;margin-top:.3rem">
+      基準日：Instagram 2026-06-21 ｜ YouTube 2026-05-15 ｜ Facebook 2026-06-21</p>
+    <div class="grid">
+      <div class="stat">
+        <div class="plat">INSTAGRAM · 主力</div>
+        <div class="big">103,987</div>
+        <div class="biglabel">粉絲數 · @5minsotsumami</div>
+        <div class="row"><span>近 30 天觸及</span><span>434,178</span></div>
+        <div class="row"><span>累積貼文</span><span>821</span></div>
+      </div>
+      <div class="stat">
+        <div class="plat">YOUTUBE</div>
+        <div class="big">466萬</div>
+        <div class="biglabel">總觀看數累積</div>
+        <div class="row"><span>近 30 天觀看</span><span>320,737</span></div>
+        <div class="row"><span>訂閱數</span><span>14,300</span></div>
+      </div>
+      <div class="stat">
+        <div class="plat">FACEBOOK · 爆發成長</div>
+        <div class="big">142萬</div>
+        <div class="biglabel">近 28 天瀏覽次數 · ↑ 330%</div>
+        <div class="row"><span>互動次數 ↑522%</span><span>32,898</span></div>
+        <div class="row"><span>淨增追蹤 ↑10x</span><span>+5,786</span></div>
+      </div>
+    </div>
+    <p class="totalline">跨平台月觸及／瀏覽合計 <b>約 220 萬+</b>，以 Instagram Reels 為核心引擎；Facebook 近一個月瀏覽爆發成長 330%。</p>
+    <div class="pagenum">03</div>
+  </section>
+
+  <!-- 4 AUDIENCE -->
+  <section class="slide">
+    <div class="kicker">Audience</div>
+    <h2><span class="bar"></span>受眾輪廓</h2>
+    <div class="chips">
+      <div class="chip">地區 · <b>台灣為主</b>（雙北集中）</div>
+      <div class="chip">會自己排<b>日本自由行</b>的客群</div>
+      <div class="chip">居酒屋 · 清酒 · Highball · 啤酒</div>
+      <div class="chip">平價美食 · 自由行攻略</div>
+    </div>
+    <div class="cols">
+      <div>
+        <h3>行為特徵</h3>
+        <li>旅遊／食譜內容<b style="color:var(--amber2)">高收藏率</b>，被存成「行動清單」</li>
+        <li>是會把「看完」轉成「實際出發」的高意圖受眾</li>
+      </div>
+      <div>
+        <h3>消費傾向</h3>
+        <li>對「微醺 × 質感 × CP 值」訴求敏感</li>
+        <li>願意為「在地體驗」買單</li>
+      </div>
+    </div>
+    <div class="pagenum">04</div>
+  </section>
+
+  <!-- 5 JAPAN TRACK RECORD -->
+  <section class="slide">
+    <div class="kicker">Proven in Japan</div>
+    <h2><span class="bar"></span>日本在地內容實績</h2>
+    <p style="color:var(--muted);margin-top:.4rem">IG 單篇觸及（近期）· 只要把一家小店講得夠動人，台灣人就想飛去坐那個位子</p>
+    <div class="bars">
+      <div class="barrow"><div class="name">沖繩 Senbero 文化介紹<small>沖繩 · 招牌題材</small></div><div class="track"><div class="fill" style="width:100%"></div></div><div class="val">137,245</div></div>
+      <div class="barrow"><div class="name">小倉新幹線攻略<small>北九州</small></div><div class="track"><div class="fill" style="width:77%"></div></div><div class="val">106,237</div></div>
+      <div class="barrow"><div class="name">富士丸迴轉壽司<small>福岡</small></div><div class="track"><div class="fill" style="width:52%"></div></div><div class="val">71,682</div></div>
+      <div class="barrow"><div class="name">川かみ Senbero<small>沖繩 · 1000日圓</small></div><div class="track"><div class="fill" style="width:52%"></div></div><div class="val">71,006</div></div>
+      <div class="barrow"><div class="name">京都車站燈光秀<small>京都</small></div><div class="track"><div class="fill" style="width:43%"></div></div><div class="val">59,171</div></div>
+      <div class="barrow"><div class="name">中洲屋台<small>福岡</small></div><div class="track"><div class="fill" style="width:40%"></div></div><div class="val">54,446</div></div>
+      <div class="barrow"><div class="name">大黑苑沖繩燒肉<small>沖繩</small></div><div class="track"><div class="fill" style="width:30%"></div></div><div class="val">41,295</div></div>
+    </div>
+    <p class="note">沖繩、福岡、京都、大阪這些「實際走過的點」都跑出穩定高觸及，
+      且<strong style="color:var(--amber2)">地方交通＋在地小店的組合特別吃香</strong>——這正是冷門航點（佐賀、宮崎、宮古島）最需要的內容類型。</p>
+    <div class="pagenum">05</div>
+  </section>
+
+  <!-- 6 SIGNATURE FORMAT -->
+  <section class="slide">
+    <div class="kicker">Signature format</div>
+    <h2><span class="bar"></span>招牌格式：Senbero 探尋</h2>
+    <p class="big-quote" style="margin-top:1.8rem">
+      「1,000 日圓喝到微醺」的在地飲酒文化系列，是我近期
+      <em>觸及最強、最具品牌辨識度</em>的內容線。
+    </p>
+    <p class="note" style="font-size:1.1rem">
+      它天生適合包裝成<strong style="color:var(--amber2)">「幾天幾夜居酒屋小店巡禮」的行程提案</strong>，
+      把一個目的地的夜間飲食魅力一次說清楚。
+    </p>
+    <div class="pagenum">06</div>
+  </section>
+
+  <!-- 7 OFFER -->
+  <section class="slide">
+    <div class="kicker">Let's work together</div>
+    <h2><span class="bar"></span>合作形式</h2>
+    <div class="offers">
+      <div class="offer"><h4>目的地行程探尋</h4><p>規劃 N 天 N 夜在地居酒屋／美食路線，產出 IG Reels + YouTube + FB 系列。</p></div>
+      <div class="offer"><h4>航線 / 景點推廣</h4><p>新航線開航、冷門航點的「為什麼值得飛一趟」內容企劃。</p></div>
+      <div class="offer"><h4>單點業配</h4><p>餐廳、酒款、旅遊周邊（eSIM、訂房、行程 App）置入。</p></div>
+      <div class="offer"><h4>長期大使</h4><p>季度／年度合作，週期性產出特定地區內容。</p></div>
+    </div>
+    <p class="note">一次拍攝、多平台分發；IG Reels 為主力，同步輸出 YouTube 長片與 FB 圖文。</p>
+    <div class="pagenum">07</div>
+  </section>
+
+  <!-- 8 CONTACT -->
+  <section class="slide contact">
+    <div class="kicker">Contact</div>
+    <h2 style="font-size:clamp(2rem,4.5vw,3.4rem)">想讓台灣人對一個地方<br>產生「下班就想訂機票」的衝動？</h2>
+    <p class="slogan" style="margin-top:1.2rem">那是我的專長。</p>
+    <div class="lines">
+      <div><b>EMAIL</b> kevin.foofighter@gmail.com</div>
+      <div><b>INSTAGRAM</b> @5minsotsumami</div>
+      <div><b>署名</b> 小黃 Kevin</div>
+    </div>
+    <div class="slogan" style="margin-top:2.5rem">不將就，需要講究。</div>
+    <div class="pagenum">08</div>
+  </section>
+
+</div>
+<div class="hint">↓ 滾動 / 方向鍵切換頁面 ｜ 可用瀏覽器「列印 → 存成 PDF」輸出</div>
+<script>
+  // arrow-key / space navigation between slides
+  const slides=[...document.querySelectorAll('.slide')];
+  let i=0;
+  function go(n){i=Math.max(0,Math.min(slides.length-1,n));slides[i].scrollIntoView({behavior:'smooth'})}
+  addEventListener('keydown',e=>{
+    if(['ArrowDown','ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();go(i+1)}
+    if(['ArrowUp','ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();go(i-1)}
+  });
+  // keep i synced with manual scroll
+  const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting)i=slides.indexOf(en.target)}),{threshold:.6});
+  slides.forEach(s=>io.observe(s));
+</script>
+</body>
+</html>
