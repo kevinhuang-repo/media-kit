@@ -76,7 +76,12 @@
 
   /* japan bars */
   .bars{margin-top:2.2rem;display:flex;flex-direction:column;gap:.85rem;max-width:760px}
-  .barrow{display:grid;grid-template-columns:200px 1fr 90px;align-items:center;gap:1rem}
+  .barrow{display:grid;grid-template-columns:210px 1fr 90px;align-items:center;gap:1rem;
+    text-decoration:none;color:inherit;transition:transform .15s ease;cursor:pointer}
+  .barrow:hover{transform:translateX(5px)}
+  .barrow:hover .name{color:var(--amber2)}
+  .barrow:hover .fill{filter:brightness(1.18)}
+  .barrow .name .ext{color:var(--muted);font-weight:400;font-size:.8em}
   .barrow .name{font-size:.95rem;color:var(--cream)}
   .barrow .name small{color:var(--muted);display:block;font-size:.75rem}
   .track{height:18px;background:var(--bg2);border-radius:9px;overflow:hidden}
@@ -98,6 +103,8 @@
   /* contact */
   .contact{background:linear-gradient(160deg,#1c140d,#120c07)}
   .contact .lines{margin-top:2rem;font-size:1.15rem;line-height:2.4}
+  .contact .lines a{color:var(--cream);text-decoration:none;border-bottom:1px solid var(--line);transition:border-color .15s,color .15s}
+  .contact .lines a:hover{color:var(--amber2);border-bottom-color:var(--amber2)}
   .contact .lines b{color:var(--amber2);margin-right:1rem;letter-spacing:.1em;
     display:inline-block;width:120px}
   .hint{position:fixed;bottom:1.2rem;left:50%;transform:translateX(-50%);
@@ -209,15 +216,16 @@
   <section class="slide">
     <div class="kicker">Proven in Japan</div>
     <h2><span class="bar"></span>日本在地內容實績</h2>
-    <p style="color:var(--muted);margin-top:.4rem">IG 單篇觸及（近期）· 只要把一家小店講得夠動人，台灣人就想飛去坐那個位子</p>
+    <p style="color:var(--muted);margin-top:.4rem">IG 單篇觸及（近期）·
+      <span style="color:var(--amber2)">每一項都可點開原貼文 ↗</span> · 把一家小店講得夠動人，台灣人就想飛去坐那個位子</p>
     <div class="bars">
-      <div class="barrow"><div class="name">沖繩 Senbero 文化介紹<small>沖繩 · 招牌題材</small></div><div class="track"><div class="fill" style="width:100%"></div></div><div class="val">137,245</div></div>
-      <div class="barrow"><div class="name">小倉新幹線攻略<small>北九州</small></div><div class="track"><div class="fill" style="width:77%"></div></div><div class="val">106,237</div></div>
-      <div class="barrow"><div class="name">富士丸迴轉壽司<small>福岡</small></div><div class="track"><div class="fill" style="width:52%"></div></div><div class="val">71,682</div></div>
-      <div class="barrow"><div class="name">川かみ Senbero<small>沖繩 · 1000日圓</small></div><div class="track"><div class="fill" style="width:52%"></div></div><div class="val">71,006</div></div>
-      <div class="barrow"><div class="name">京都車站燈光秀<small>京都</small></div><div class="track"><div class="fill" style="width:43%"></div></div><div class="val">59,171</div></div>
-      <div class="barrow"><div class="name">中洲屋台<small>福岡</small></div><div class="track"><div class="fill" style="width:40%"></div></div><div class="val">54,446</div></div>
-      <div class="barrow"><div class="name">大黑苑沖繩燒肉<small>沖繩</small></div><div class="track"><div class="fill" style="width:30%"></div></div><div class="val">41,295</div></div>
+      <a class="barrow" href="https://www.instagram.com/reel/DX9b-ZppVAN/" target="_blank" rel="noopener"><div class="name">沖繩 Senbero 文化介紹 <span class="ext">↗</span><small>沖繩 · 招牌題材</small></div><div class="track"><div class="fill" style="width:100%"></div></div><div class="val">137,245</div></a>
+      <a class="barrow" href="https://www.instagram.com/reel/DQY9l28iYaG/" target="_blank" rel="noopener"><div class="name">小倉新幹線攻略 <span class="ext">↗</span><small>北九州</small></div><div class="track"><div class="fill" style="width:77%"></div></div><div class="val">106,237</div></a>
+      <a class="barrow" href="https://www.instagram.com/reel/DP8fgYBiXNQ/" target="_blank" rel="noopener"><div class="name">富士丸迴轉壽司 <span class="ext">↗</span><small>福岡</small></div><div class="track"><div class="fill" style="width:52%"></div></div><div class="val">71,682</div></a>
+      <a class="barrow" href="https://www.instagram.com/reel/DYhI4FApEUR/" target="_blank" rel="noopener"><div class="name">川かみ Senbero <span class="ext">↗</span><small>沖繩 · 1000日圓</small></div><div class="track"><div class="fill" style="width:52%"></div></div><div class="val">71,006</div></a>
+      <a class="barrow" href="https://www.instagram.com/reel/DS45mLVCbUK/" target="_blank" rel="noopener"><div class="name">京都車站燈光秀 <span class="ext">↗</span><small>京都</small></div><div class="track"><div class="fill" style="width:43%"></div></div><div class="val">59,171</div></a>
+      <a class="barrow" href="https://www.instagram.com/reel/DQ1A1blCcri/" target="_blank" rel="noopener"><div class="name">中洲屋台 <span class="ext">↗</span><small>福岡</small></div><div class="track"><div class="fill" style="width:40%"></div></div><div class="val">54,446</div></a>
+      <a class="barrow" href="https://www.instagram.com/reel/DYUUhE4Jjfl/" target="_blank" rel="noopener"><div class="name">大黑苑沖繩燒肉 <span class="ext">↗</span><small>沖繩</small></div><div class="track"><div class="fill" style="width:30%"></div></div><div class="val">41,295</div></a>
     </div>
     <p class="note">沖繩、福岡、京都、大阪這些「實際走過的點」都跑出穩定高觸及，
       且<strong style="color:var(--amber2)">地方交通＋在地小店的組合特別吃香</strong>——這正是冷門航點（佐賀、宮崎、宮古島）最需要的內容類型。</p>
@@ -243,13 +251,14 @@
   <section class="slide">
     <div class="kicker">Let's work together</div>
     <h2><span class="bar"></span>合作形式</h2>
-    <div class="offers">
-      <div class="offer"><h4>目的地行程探尋</h4><p>規劃 N 天 N 夜在地居酒屋／美食路線，產出 IG Reels + YouTube + FB 系列。</p></div>
-      <div class="offer"><h4>航線 / 景點推廣</h4><p>新航線開航、冷門航點的「為什麼值得飛一趟」內容企劃。</p></div>
-      <div class="offer"><h4>單點業配</h4><p>餐廳、酒款、旅遊周邊（eSIM、訂房、行程 App）置入。</p></div>
-      <div class="offer"><h4>長期大使</h4><p>季度／年度合作，週期性產出特定地區內容。</p></div>
+    <p style="color:var(--muted);margin-top:.3rem;font-size:1.1rem">我希望的贊助內容很單純，主要包含兩項：</p>
+    <div class="offers" style="grid-template-columns:repeat(2,1fr);max-width:760px;margin-top:1.8rem">
+      <div class="offer"><h4 style="font-size:1.4rem">✈️ 機票 ＋ 住宿</h4><p style="font-size:1.05rem">前往目的地的來回機票與當地住宿。</p></div>
+      <div class="offer"><h4 style="font-size:1.4rem">🚗 租車</h4><p style="font-size:1.05rem">當地交通機動性，方便深入在地小店與景點。</p></div>
     </div>
-    <p class="note">一次拍攝、多平台分發；IG Reels 為主力，同步輸出 YouTube 長片與 FB 圖文。</p>
+    <p class="note" style="font-size:1.15rem;margin-top:2.4rem">
+      至於<strong style="color:var(--amber2)">內容形式與發文細節</strong>（產出幾支、平台分配、上架時程等），
+      都非常有彈性，歡迎一起討論、量身規劃。</p>
     <div class="pagenum">07</div>
   </section>
 
@@ -259,10 +268,10 @@
     <h2 style="font-size:clamp(2rem,4.5vw,3.4rem)">想讓台灣人對一個地方<br>產生「下班就想訂機票」的衝動？</h2>
     <p class="slogan" style="margin-top:1.2rem">那是我的專長。</p>
     <div class="lines">
-      <div><b>EMAIL</b> 5minsotsumami@gmail.com</div>
-      <div><b>INSTAGRAM</b> instagram.com/5minsotsumami</div>
-      <div><b>FACEBOOK</b> facebook.com/5minsotsumami</div>
-      <div><b>YOUTUBE</b> youtube.com/@5mins</div>
+      <div><b>EMAIL</b> <a href="mailto:5minsotsumami@gmail.com">5minsotsumami@gmail.com</a></div>
+      <div><b>INSTAGRAM</b> <a href="https://www.instagram.com/5minsotsumami/" target="_blank" rel="noopener">instagram.com/5minsotsumami</a></div>
+      <div><b>FACEBOOK</b> <a href="https://www.facebook.com/5minsotsumami/" target="_blank" rel="noopener">facebook.com/5minsotsumami</a></div>
+      <div><b>YOUTUBE</b> <a href="https://www.youtube.com/@5mins" target="_blank" rel="noopener">youtube.com/@5mins</a></div>
       <div><b>署名</b> 小黃 Kevin</div>
     </div>
     <div class="slogan" style="margin-top:2.5rem">不將就，需要講究。</div>
